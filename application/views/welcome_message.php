@@ -58,7 +58,6 @@
 
 	</head>
 	<body>
-		
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -86,13 +85,11 @@
 						</li>
 						<li><a href="pricing.html">Pricing</a></li>
 						<li><a href="contact.html">Contact</a></li>
+						<li><a href="<?php echo base_url(); ?>index.php/welcome/login">Login</a></li>
 					</ul>	
 				</div>
 			</div>
-			
-		</div>
 	</nav>
-	
 	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(<?php echo base_url(); ?>assets/images/img_bg_2.jpg)">
 		<div class="overlay"></div>
 		<div class="gtco-container">
@@ -117,7 +114,7 @@
 														<label for="activities">Origin</label>
 														<select name="#" id="activities" class="form-control">
 															<option value="">Surabaya</option>
-															<option value="">Solo</option>
+															<option value="">Palu</option>
 															<option value="">Jogja</option>
 															<option value="">Jakarta</option>
 														</select>
@@ -128,7 +125,7 @@
 														<label for="destination">Destination</label>
 														<select name="#" id="destination" class="form-control">
 															<option value="">Surabaya</option>
-															<option value="">Solo</option>
+															<option value="">Palu</option>
 															<option value="">Jogja</option>
 															<option value="">Jakarta</option>
 														</select>
@@ -168,7 +165,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 					<h2>Most Popular Destination</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<p>Discover More Stunning Destination with us</p>
 				</div>
 			</div>
 			<div class="row">
@@ -187,75 +184,31 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="<?php echo base_url(); ?>assets/images/img_2.jpg" class="fh5co-card-item image-popup">
+					<a href="<?php echo base_url(); ?>assets/images/jak.jpg" class="fh5co-card-item image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url(); ?>assets/images/img_2.jpg" alt="Image" class="img-responsive">
+							<img src="<?php echo base_url(); ?>assets/images/jak.jpg" alt="Image" class="img-responsive">
 						</figure>
 						<div class="fh5co-text">
-							<h2>Seoul, South Korea</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<h2>Jakarta</h2>
+							<p>Capital city of Indonesia</p>
 							<p><span class="btn btn-primary">Schedule a Trip</span></p>
 						</div>
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="<?php echo base_url(); ?>assets/images/img_3.jpg" class="fh5co-card-item image-popup">
+					<a href="<?php echo base_url(); ?>assets/images/plw.jpg" class="fh5co-card-item image-popup">
 						<figure>
 							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url(); ?>assets/images/img_3.jpg" alt="Image" class="img-responsive">
+							<img src="<?php echo base_url(); ?>assets/images/plw.jpg" alt="Image" class="img-responsive">
 						</figure>
 						<div class="fh5co-text">
-							<h2>Paris, France</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<h2>Palu, Central Celebes</h2>
+							<p>Far far away, behind the word mountains</p>
 							<p><span class="btn btn-primary">Schedule a Trip</span></p>
 						</div>
 					</a>
 				</div>
-
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="<?php echo base_url(); ?>assets/images/img_4.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url(); ?>assets/images/img_4.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Sydney, Australia</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="btn btn-primary">Schedule a Trip</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="<?php echo base_url(); ?>assets/images/img_5.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url(); ?>assets/images/img_5.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Greece, Europe</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="btn btn-primary">Schedule a Trip</span></p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="<?php echo base_url(); ?>assets/images/img_6.jpg" class="fh5co-card-item image-popup">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="<?php echo base_url(); ?>assets/images/img_6.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="fh5co-text">
-							<h2>Spain, Europe</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							<p><span class="btn btn-primary">Schedule a Trip</span></p>
-						</div>
-					</a>
-				</div>
-
 			</div>
 		</div>
 	</div>
@@ -328,26 +281,26 @@
 				
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="196" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="2414" data-speed="5000" data-refresh-interval="50>1</span>
 						<span class="counter-label">Destination</span>
 
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="97" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="42354" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">Hotels</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="12402" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="12492" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">Travelers</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="12202" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter js-counter" data-from="0" data-to="12252" data-speed="5000" data-refresh-interval="50">1</span>
 						<span class="counter-label">Happy Customer</span>
 
 					</div>
@@ -405,19 +358,6 @@
 							<li><a href="#">Asia</a></li>
 							<li><a href="#">Canada</a></li>
 							<li><a href="#">Dubai</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-md-push-1">
-					<div class="gtco-widget">
-						<h3>Hotels</h3>
-						<ul class="gtco-footer-links">
-							<li><a href="#">Luxe Hotel</a></li>
-							<li><a href="#">Italy 5 Star hotel</a></li>
-							<li><a href="#">Dubai Hotel</a></li>
-							<li><a href="#">Deluxe Hotel</a></li>
-							<li><a href="#">BoraBora Hotel</a></li>
 						</ul>
 					</div>
 				</div>
