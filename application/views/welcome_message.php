@@ -99,7 +99,7 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1>Planing Trip To Anywhere in The World?</h1>	
+							<h1>Planing To Discover Indonesian Paradise? Lets Fly With Us !</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
@@ -217,8 +217,7 @@
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2>How It Works</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<h2>Mengapa Travellink ?</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -227,8 +226,8 @@
 						<span class="icon">
 							<i>1</i>
 						</span>
-						<h3>Lorem ipsum dolor sit amet</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						<h3>Harga Hemat</h3>
+						<p> Harga Termurah se Indonesia</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -236,8 +235,8 @@
 						<span class="icon">
 							<i>2</i>
 						</span>
-						<h3>Consectetur adipisicing elit</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						<h3>Pilihan Lengkap</h3>
+						<p>Pilihan Maskapai Terlengkap</p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
@@ -245,8 +244,8 @@
 						<span class="icon">
 							<i>3</i>
 						</span>
-						<h3>Dignissimos asperiores vitae</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						<h3>Tanpa Biaya Tambahan</h3>
+						<p>Harga yang tertera adalah harga Final !</p>
 					</div>
 				</div>
 				

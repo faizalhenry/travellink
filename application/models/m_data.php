@@ -4,6 +4,21 @@ class M_data extends CI_Model{
 	function tampil_data(){
 		return $this->db->get('tb_user');
 	}
+	function tampil_data_customer(){
+		return $this->db->get('tb_customer');
+	}
+	function tampil_data_reservation(){
+		return $this->db->get('tb_reservation');
+	}
+	function tampil_data_rute(){
+		return $this->db->get('tb_rute');
+	}
+	function tampil_data_transportation(){
+		return $this->db->get('tb_transportation');
+	}
+	function tampil_data_transportation_type(){
+		return $this->db->get('tb_transportation_type');
+	}
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
 	}

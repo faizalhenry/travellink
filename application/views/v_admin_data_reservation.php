@@ -369,22 +369,32 @@
                 <table id="data_user" class="table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th>No id</th>
-                      <th>Fullname</th>
-                      <th>Username</th>
-                      <th>Password</th>
-                      <th>Level</th>
+                      <th>id</th>
+                      <th>reservation_id</th>
+                      <th>reservation_at</th>
+                      <th>reservation_date</th>
+                      <th>customer_id</th>
+                      <th>seat_code</th>
+                      <th>rute_id</th>
+                      <th>depart_at</th>
+                      <th>price</th>
+                      <th>user_id</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <?php  foreach ($tb_user as $u) { ?>
+                    <?php  foreach ($tb_reservation as $u) { ?>
                     <tr>
                       <td><?php echo $u->id; ?></td>
-                      <td><?php echo $u->fullname; ?></td>
-                      <td><?php echo $u->username; ?></td>
-                      <td><?php echo base64_decode($u->password); ?></td>
-                      <td><?php echo $u->level; ?></td>
+                      <td><?php echo $u->reservation_id; ?></td>
+                      <td><?php echo $u->reservation_at; ?></td>
+                      <td><?php echo $u->reservation_date; ?></td>
+                      <td><?php echo $u->customer_id; ?></td>
+                      <td><?php echo $u->seat_code; ?></td>
+                      <td><?php echo $u->rute_id; ?></td>
+                      <td><?php echo $u->depart_at; ?></td>
+                      <td><?php echo $u->price; ?></td>
+                      <td><?php echo $u->user_id; ?></td>
                       <td>
                         <a href=<?php echo base_url("crud/edit/".$u->id); ?> class="btn btn-primary a-btn-slide-text">
                           <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>

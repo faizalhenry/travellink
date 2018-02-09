@@ -68,22 +68,6 @@
 													<input type="password" name="password" id="password">
 												</fieldset>
 												<input type="submit" id="login" value="Sign in">
-											</fieldset>
-											<span><a href="#">Forgot your password?</a></span>
-											<div class="or-grid">
-												<p>OR</p>
-											</div>
-											<div class="social-sits">
-												<div class="facebook-button">
-													<a href="#">Connect with Facebook</a>
-												</div>
-												<div class="chrome-button">
-													<a href="#">Connect with Google</a>
-												</div>
-												<div class="button-bottom">
-													<p>New account? <a href="signup.html">Signup</a></p>
-												</div>
-											</div>
 										</div>
 									</div>
 								</form>
