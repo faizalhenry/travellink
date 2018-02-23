@@ -16,29 +16,34 @@ class Admin extends CI_Controller {
 		$data['tb_user']= $this->m_data->tampil_data()->result();
 		$this->load->view('v_admin',$data);
 	}
+	public function user()
+	{
+		$data['user']= $this->m_data->tampil_data()->result();
+		$this->load->view('v_admin_data_user',$data);
+	}
+	public function customer()
+	{
+		$data['tb_customer']= $this->m_data->tampil_data_customer()->result();
+		$this->load->view('v_admin_data_customer',$data);
+	}
 	public function reservation()
 	{
-		$data['tb_reservation']= $this->m_data->tampil_data()->result();
+		$data['tb_reservation']= $this->m_data->tampil_data_reservation()->result();
 		$this->load->view('v_admin_data_reservation',$data);
 	}
 	public function rute()
 	{
-		$data['tb_rute']= $this->m_data->tampil_data()->result();
-		$this->load->view('v_admin',$data);
+		$data['tb_rute']= $this->m_data->tampil_data_rute()->result();
+		$this->load->view('v_admin_data_rute',$data);
 	}
 	public function transportation()
 	{
-		$data['tb_transportation']= $this->m_data->tampil_data()->result();
-		$this->load->view('v_admin',$data);
+		$data['tb_transportation']= $this->m_data->tampil_data_transportation()->result();
+		$this->load->view('v_admin_data_transportation',$data);
 	}
 	public function transportation_type()
 	{
-		$data['tb_transportation_type']= $this->m_data->tampil_data()->result();
-		$this->load->view('v_admin',$data);
-	}
-	public function user()
-	{
-		$data['tb_user']= $this->m_data->tampil_data()->result();
-		$this->load->view('v_admin_data_user',$data);
+		$data['tb_transportation_type']= $this->m_data->tampil_data_transportation_type()->result();
+		$this->load->view('v_admin_data_transportation_type',$data);
 	}
 }

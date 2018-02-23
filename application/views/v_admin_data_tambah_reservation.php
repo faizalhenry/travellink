@@ -323,8 +323,13 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
-                 <li><a href=<?php echo base_url("admin"); ?>><i class="fa fa-circle-o"></i> Overview</a></li>
-                <li class="active"><a href=<?php echo base_url("admin/data_user"); ?>><i class="fa fa-table"></i> Data users</a></li>   
+                   <li><a href=<?php echo base_url("admin"); ?>><i class="fa fa-circle-o"></i> Overview</a></li>
+                   <li><a href=<?php echo base_url("admin/user"); ?>><i class="fa fa-table"></i> Data Users</a></li>
+                   <li><a href=<?php echo base_url("admin/customer"); ?>><i class="fa fa-table"></i> Data Customer</a></li>
+                   <li class="active"><a href=<?php echo base_url("admin/reservation"); ?>><i class="fa fa-table"></i> Data Reservation</a></li>
+                   <li><a href=<?php echo base_url("admin/rute"); ?>><i class="fa fa-table"></i> Data Rute</a></li>
+                   <li><a href=<?php echo base_url("admin/transportation"); ?>><i class="fa fa-table"></i> Data Transportation</a></li>
+                   <li><a href=<?php echo base_url("admin/transportation_type"); ?>><i class="fa fa-table"></i> Data Transportation Type</a></li>   
         </ul>
       </section>
       <!-- /.sidebar -->
@@ -352,36 +357,49 @@
 
           <div class="box">
               <div class="box-header">
-                <h3 class="box-title">Edit data</h3>
+                <h3 class="box-title">Tambah data</h3>
               </div>
               <!-- /.box-header -->
               <div class="box-body">
-              <?php foreach ($user as $u) {
-               
-              ?>
               <!-- form start -->
-            <form  action=<?php echo base_url("crud/update"); ?> method="post">
+            <form  action=<?php echo base_url("crud/tambah_aksi_reservation"); ?> method="post">
               <div class="box-body">
                 <div class="form-group">
-                  <label>Fullname</label>
-                    <input type="hidden" class="form-control" name="id" value=<?php echo $u->id;?>  />
-                  <input type="text" class="form-control" name="fullname" value=<?php echo $u->fullname;?> />
+                  <label>Reservation ID</label>
+                    <input type="hidden" class="form-control" name="id"  />
+                  <input type="text" class="form-control" name="reservation_id" />
                 </div>
                  <div class="form-group">
-                  <label>Username</label>
-                  <input type="text" class="form-control" name="username"  value=<?php echo $u->username;?> />
+                  <label>Reservation At</label>
+                  <input type="text" class="form-control" name="reservation_id"/>
                 </div>
                   <div class="form-group">
-                  <label >Password</label>
-                  <input type="text" class="form-control" name="password" value=<?php echo base64_decode($u->password);?> />
+                  <label >Reservation Date</label>
+                  <input type="text" class="form-control" name="  reservation_date"/>
+                </div>
+                  <div class="form-group">
+                  <label >Customer ID</label>
+                  <input type="text" class="form-control" name="  customerid"/>
+                </div>
+                  <div class="form-group">
+                  <label >Seat Code</label>
+                  <input type="text" class="form-control" name="seat_code"/>
+                </div>
+                  <div class="form-group">
+                  <label >Rute ID</label>
+                  <input type="text" class="form-control" name="  ruteid"/>
                 </div>
                 <div class="form-group">
-                  <label>Level</label>
-                  <select class="form-control" name="level">
-                    <option value="-">-- SELECT LEVEL --</option>
-                    <option <?php if($u->level==='admin'){echo "selected";} ?> value="admin">Admin</option>
-                    <option  <?php if($u->level==='user'){echo "selected";} ?> value="user">User</option>
-                  </select>
+                  <label >Depart At</label>
+                  <input type="text" class="form-control" name="depart_at"/>
+                </div>
+                <div class="form-group">
+                  <label >Price</label>
+                  <input type="text" class="form-control" name="price"/>
+                </div>
+                <div class="form-group">
+                  <label >User ID</label>
+                  <input type="text" class="form-control" name="userid"/>
                 </div>
               </div>
               <!-- /.box-body -->
@@ -391,7 +409,6 @@
             </form>
              </div>
              <!-- /.box-body -->
-             <?php  } ?>
           </div>
            <!-- /.box -->
          </div>

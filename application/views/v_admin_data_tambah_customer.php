@@ -323,8 +323,13 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
-                 <li><a href=<?php echo base_url("admin"); ?>><i class="fa fa-circle-o"></i> Overview</a></li>
-                <li class="active"><a href=<?php echo base_url("admin/data_user"); ?>><i class="fa fa-table"></i> Data users</a></li>   
+                   <li><a href=<?php echo base_url("admin"); ?>><i class="fa fa-circle-o"></i> Overview</a></li>
+                   <li><a href=<?php echo base_url("admin/user"); ?>><i class="fa fa-table"></i> Data Users</a></li>
+                   <li class="active"><a href=<?php echo base_url("admin/customer"); ?>><i class="fa fa-table"></i> Data Customer</a></li>
+                   <li><a href=<?php echo base_url("admin/reservation"); ?>><i class="fa fa-table"></i> Data Reservation</a></li>
+                   <li><a href=<?php echo base_url("admin/rute"); ?>><i class="fa fa-table"></i> Data Rute</a></li>
+                   <li><a href=<?php echo base_url("admin/transportation"); ?>><i class="fa fa-table"></i> Data Transportation</a></li>
+                   <li><a href=<?php echo base_url("admin/transportation_type"); ?>><i class="fa fa-table"></i> Data Transportation Type</a></li>   
         </ul>
       </section>
       <!-- /.sidebar -->
@@ -352,36 +357,29 @@
 
           <div class="box">
               <div class="box-header">
-                <h3 class="box-title">Edit data</h3>
+                <h3 class="box-title">Tambah data</h3>
               </div>
               <!-- /.box-header -->
               <div class="box-body">
-              <?php foreach ($user as $u) {
-               
-              ?>
               <!-- form start -->
-            <form  action=<?php echo base_url("crud/update"); ?> method="post">
+            <form  action=<?php echo base_url("crud/tambah_aksi_customer"); ?> method="post">
               <div class="box-body">
                 <div class="form-group">
-                  <label>Fullname</label>
-                    <input type="hidden" class="form-control" name="id" value=<?php echo $u->id;?>  />
-                  <input type="text" class="form-control" name="fullname" value=<?php echo $u->fullname;?> />
+                  <label>Name</label>
+                    <input type="hidden" class="form-control" name="id"  />
+                  <input type="text" class="form-control" name="name" />
                 </div>
                  <div class="form-group">
-                  <label>Username</label>
-                  <input type="text" class="form-control" name="username"  value=<?php echo $u->username;?> />
+                  <label>Address</label>
+                  <input type="text" class="form-control" name="address"/>
                 </div>
                   <div class="form-group">
-                  <label >Password</label>
-                  <input type="text" class="form-control" name="password" value=<?php echo base64_decode($u->password);?> />
+                  <label >Phone</label>
+                  <input type="text" class="form-control" name="phone"/>
                 </div>
-                <div class="form-group">
-                  <label>Level</label>
-                  <select class="form-control" name="level">
-                    <option value="-">-- SELECT LEVEL --</option>
-                    <option <?php if($u->level==='admin'){echo "selected";} ?> value="admin">Admin</option>
-                    <option  <?php if($u->level==='user'){echo "selected";} ?> value="user">User</option>
-                  </select>
+                  <div class="form-group">
+                  <label >Gender</label>
+                  <input type="text" class="form-control" name="gender"/>
                 </div>
               </div>
               <!-- /.box-body -->
@@ -391,7 +389,6 @@
             </form>
              </div>
              <!-- /.box-body -->
-             <?php  } ?>
           </div>
            <!-- /.box -->
          </div>

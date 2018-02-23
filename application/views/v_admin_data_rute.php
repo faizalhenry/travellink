@@ -323,8 +323,13 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
-                 <li><a href=<?php echo base_url("admin"); ?>><i class="fa fa-circle-o"></i> Overview</a></li>
-                <li class="active"><a href=<?php echo base_url("admin/data_user"); ?>><i class="fa fa-table"></i> Data users</a></li>   
+                   <li><a href=<?php echo base_url("admin"); ?>><i class="fa fa-circle-o"></i> Overview</a></li>
+                   <li><a href=<?php echo base_url("admin/user"); ?>><i class="fa fa-table"></i> Data Users</a></li>
+                   <li><a href=<?php echo base_url("admin/customer"); ?>><i class="fa fa-table"></i> Data Customer</a></li>
+                   <li><a href=<?php echo base_url("admin/reservation"); ?>><i class="fa fa-table"></i> Data Reservation</a></li>
+                   <li class="active"><a href=<?php echo base_url("admin/rute"); ?>><i class="fa fa-table"></i> Data Rute</a></li>
+                   <li><a href=<?php echo base_url("admin/transportation"); ?>><i class="fa fa-table"></i> Data Transportation</a></li>
+                   <li><a href=<?php echo base_url("admin/transportation_type"); ?>><i class="fa fa-table"></i> Data Transportation Type</a></li>   
         </ul>
       </section>
       <!-- /.sidebar -->
@@ -350,49 +355,54 @@
         <div class="row">
           <div class="col-xs-12">
 
-          <div class="box">
+            <div class="box">
               <div class="box-header">
-                <h3 class="box-title">Edit data</h3>
+                <h3 class="box-title">Data Table With Full Features</h3>     
+                  <a href=<?php echo base_url("crud/tambah_rute/"); ?> class="btn btn-primary a-btn-slide-text" style="position:absolute;right:0;margin-right:10px; ">
+                          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                          <span><strong>Add</strong></span>            
+                        </a>
               </div>
               <!-- /.box-header -->
               <div class="box-body">
-              <?php foreach ($user as $u) {
-               
-              ?>
-              <!-- form start -->
-            <form  action=<?php echo base_url("crud/update"); ?> method="post">
-              <div class="box-body">
-                <div class="form-group">
-                  <label>Fullname</label>
-                    <input type="hidden" class="form-control" name="id" value=<?php echo $u->id;?>  />
-                  <input type="text" class="form-control" name="fullname" value=<?php echo $u->fullname;?> />
-                </div>
-                 <div class="form-group">
-                  <label>Username</label>
-                  <input type="text" class="form-control" name="username"  value=<?php echo $u->username;?> />
-                </div>
-                  <div class="form-group">
-                  <label >Password</label>
-                  <input type="text" class="form-control" name="password" value=<?php echo base64_decode($u->password);?> />
-                </div>
-                <div class="form-group">
-                  <label>Level</label>
-                  <select class="form-control" name="level">
-                    <option value="-">-- SELECT LEVEL --</option>
-                    <option <?php if($u->level==='admin'){echo "selected";} ?> value="admin">Admin</option>
-                    <option  <?php if($u->level==='user'){echo "selected";} ?> value="user">User</option>
-                  </select>
-                </div>
-              </div>
-              <!-- /.box-body -->
-              <div class="box-footer">
-                <input type="submit" value="submit" class="btn btn-primary"/>
-              </div>
-            </form>
+                <table id="data_user" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>No id</th>
+                      <th>Depart At</th>
+                      <th>Rute From</th>
+                      <th>Rute To</th>
+                      <th>Price</th>
+                      <th>Transportation Id</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php  foreach ($tb_rute as $u) { ?>
+                    <tr>
+                      <td><?php echo $u->id; ?></td>
+                      <td><?php echo $u->depart_at; ?></td>
+                      <td><?php echo $u->rute_from; ?></td>
+                      <td><?php echo $u->rute_to; ?></td>
+                      <td><?php echo $u->price; ?></td>
+                      <td><?php echo $u->transportation_id; ?></td>
+                      <td>
+                        <a href=<?php echo base_url("crud/edit/".$u->id); ?> class="btn btn-primary a-btn-slide-text">
+                          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                          <span><strong>Edit</strong></span>            
+                        </a>
+                        <a href=<?php echo base_url("crud/hapus/".$u->id); ?> class="btn btn-primary a-btn-slide-text">
+                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                         <span><strong>Delete</strong></span>            
+                       </a>
+                     </td>
+                   </tr>
+                   <?php } ?>
+                 </tfoot>
+               </table>
              </div>
              <!-- /.box-body -->
-             <?php  } ?>
-          </div>
+           </div>
            <!-- /.box -->
          </div>
          <!-- /.col -->
@@ -610,6 +620,8 @@
 <script src="<?php echo base_url(); ?>gudang/adminlte/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="<?php echo base_url(); ?>gudang/adminlte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url(); ?>gudang/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url(); ?>gudang/adminlte/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <!-- SlimScroll -->
 <script src="<?php echo base_url(); ?>gudang/adminlte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
@@ -620,6 +632,17 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>gudang/adminlte/dist/js/demo.js"></script>
 <!-- page script -->
-
+<script>
+  $(function () {
+    $("#data_user").DataTable({
+       "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true
+    });
+  });
+</script>
 </body>
 </html>

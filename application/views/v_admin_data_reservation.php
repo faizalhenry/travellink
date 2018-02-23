@@ -323,14 +323,13 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
-                 <li><a href=<?php echo base_url("admin"); ?>><i class="fa fa-circle-o"></i> Overview</a></li>
-                <li class="active"><a href=<?php echo base_url("admin/data_user"); ?>><i class="fa fa-table"></i> Data users</a></li>
-                <li><a href=<?php echo base_url("admin/customer"); ?>><i class="fa fa-table"></i> Data Customer</a></li>
-                    <li><a href=<?php echo base_url("admin/reservation"); ?>><i class="fa fa-table"></i> Data Reservation</a></li>
-                     <li><a href=<?php echo base_url("admin/rute"); ?>><i class="fa fa-table"></i> Data Rute</a></li>  
-                      <li><a href=<?php echo base_url("admin/transportation"); ?>><i class="fa fa-table"></i> Data Transportation</a></li>
-                       <li><a href=<?php echo base_url("admin/transportation_type"); ?>><i class="fa fa-table"></i> Data Transportation Type</a></li>  
-
+                   <li><a href=<?php echo base_url("admin"); ?>><i class="fa fa-circle-o"></i> Overview</a></li>
+                   <li><a href=<?php echo base_url("admin/user"); ?>><i class="fa fa-table"></i> Data Users</a></li>
+                   <li><a href=<?php echo base_url("admin/customer"); ?>><i class="fa fa-table"></i> Data Customer</a></li>
+                   <li class="active"><a href=<?php echo base_url("admin/reservation"); ?>><i class="fa fa-table"></i> Data Reservation</a></li>
+                   <li><a href=<?php echo base_url("admin/rute"); ?>><i class="fa fa-table"></i> Data Rute</a></li>
+                   <li><a href=<?php echo base_url("admin/transportation"); ?>><i class="fa fa-table"></i> Data Transportation</a></li>
+                   <li><a href=<?php echo base_url("admin/transportation_type"); ?>><i class="fa fa-table"></i> Data Transportation Type</a></li>   
         </ul>
       </section>
       <!-- /.sidebar -->
@@ -359,7 +358,7 @@
             <div class="box">
               <div class="box-header">
                 <h3 class="box-title">Data Table With Full Features</h3>     
-                  <a href=<?php echo base_url("crud/tambah/"); ?> class="btn btn-primary a-btn-slide-text" style="position:absolute;right:0;margin-right:10px; ">
+                  <a href=<?php echo base_url("crud/tambah_reservation/"); ?> class="btn btn-primary a-btn-slide-text" style="position:absolute;right:0;margin-right:10px; ">
                           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                           <span><strong>Add</strong></span>            
                         </a>
@@ -369,16 +368,16 @@
                 <table id="data_user" class="table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th>id</th>
-                      <th>reservation_id</th>
-                      <th>reservation_at</th>
-                      <th>reservation_date</th>
-                      <th>customer_id</th>
-                      <th>seat_code</th>
-                      <th>rute_id</th>
-                      <th>depart_at</th>
-                      <th>price</th>
-                      <th>user_id</th>
+                      <th>No id</th>
+                      <th>Reservation ID</th>
+                      <th>Reservation At</th>
+                      <th>Reservation Date</th>
+                      <th>Customer ID</th>
+                      <th>Seat Code</th>
+                      <th>Rute ID</th>
+                      <th>Depart At</th>
+                      <th>Price</th>
+                      <th>User ID</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -394,7 +393,7 @@
                       <td><?php echo $u->rute_id; ?></td>
                       <td><?php echo $u->depart_at; ?></td>
                       <td><?php echo $u->price; ?></td>
-                      <td><?php echo $u->user_id; ?></td>
+                      <td><?php echo $u->userid; ?></td>
                       <td>
                         <a href=<?php echo base_url("crud/edit/".$u->id); ?> class="btn btn-primary a-btn-slide-text">
                           <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
